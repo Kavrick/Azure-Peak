@@ -237,6 +237,30 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/rogueweapon/dscythe
+	force = 15
+	force_wielded = 26
+	possible_item_intents = list(SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
+	gripped_intents = list(/datum/intent/spear/cut/halberd, /datum/intent/sword/chop, SPEAR_BASH)
+	name = "dendorite scythe"
+	desc = "An uncanny scythe grown from dendorite woodshard, the blade seems to hum with a summer's warmth."
+	icon_state = "dscythe"
+	icon = 'icons/roguetown/weapons/64.dmi'
+	pixel_y = -16
+	pixel_x = -16
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64
+	bigboy = TRUE
+	gripsprite = TRUE
+	wlength = WLENGTH_GREAT
+	w_class = WEIGHT_CLASS_BULKY
+	minstr = 9
+	max_blade_int = 200
+	anvilrepair = /datum/skill/craft/weaponsmithing
+	associated_skill = /datum/skill/combat/polearms
+	blade_dulling = DULLING_BASHCHOP
+	walking_stick = TRUE
+	wdefense = 14
 
 /obj/item/rogueweapon/halberd/bardiche
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
